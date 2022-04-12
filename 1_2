@@ -1,0 +1,158 @@
+Date:22/3/2022
+SQL> connect
+Enter user-name: system
+Enter password:
+Connected.
+
+1)SQL> create table stud(Rollno int primary key,Name varchar(60),Course varchar(50),year int);
+
+Table created.
+
+SQL> insert into stud values(1,'Ammu','MCA',2022);
+
+1 row created.
+
+SQL> insert into stud values(2,'Anu','MCA',2022);
+
+1 row created.
+
+
+SQL> insert into stud values(3,'abhi','MCA',2022);
+
+1 row created.
+
+SQL> insert into stud values(4,'Milan','MCA',2022);
+
+1 row created.
+
+SQL> insert into stud values(5,'Dileesh','MCA',2022);
+
+1 row created.
+
+SQL> truncate table stud;
+
+Table truncated.
+
+SQL> drop table stud;
+
+Table dropped.
+2)
+
+SQL> create table emp2(empid int,name varchar(50),dept varchar(20),sal int,deptid int);
+
+Table created.
+
+
+SQL> create table dept(deptid int,deptname varchar(30),hod varchar(50));
+
+Table created.
+
+SQL> alter table dept add primary key(deptid);
+
+Table altered.
+
+SQL> alter table dept add constraint emp2 foreign key (deptid) references dept(deptid);
+
+Table altered.
+
+SQL> insert into dept values(101,'HR','Sumit Singh');
+
+1 row created.
+
+SQL> insert into dept values(102,'SALES','DIGVIJAY');
+
+1 row created.
+
+SQL> insert into dept values(103,'PROGRAMMING','AJIN');
+
+1 row created.
+
+SQL> insert into dept values(104,'ANALATYCS','MALAVAZHI SREENIVASAN');
+
+1 row created.
+
+SQL> insert into dept values(105,'ADVERTISEMENT','MANIDEEP');
+
+1 row created.
+
+SQL> insert into emp2 values(1,'ANU','HR',40000,101);
+
+1 row created.
+
+SQL> insert into emp2 values(1,'AMMU','HR',40000,101);
+
+1 row created.
+
+SQL> insert into emp2 values(1,'ABHI','PROGRAMMING',45000,103);
+
+1 row created.
+
+SQL> insert into emp2 values(4,'MILAN','PROGRAMMING',45000,103);
+
+1 row created.
+
+SQL> insert into emp2 values(5,'DILESSH','PROGRAMMING',45000,103);
+
+1 row created.
+
+SQL> update emp2 set empid=2 where name='AMMU';
+
+1 row updated.
+
+SQL> update emp2 set empid=3 where name='Abhi';
+
+0 rows updated.
+
+SQL> update emp2 set empid=3 where name='ABHI';
+
+1 row updated.
+
+SQL> select *from dept;
+
+DEPTID           DEPTNAME                                HOD
+----------   ------------------------------  --------------------------------------------------
+
+101                           HR                      Sumit Singh
+
+102                          SALES                    DIGVIJAY
+
+103                          PROGRAMMING              AJIN
+
+104                          ANALATYCS	             MALAVAZHI SREENIVASAN
+
+105                          ADVERTISEMENT           MANIDEEP
+
+
+SQL> select *from emp2;
+
+EMPID                          NAME                                  DEPT                               SAL             DEPTID
+---------- --------------------------------------------------    --------------------              ----------        ----------
+1                                   ANU                               HR                                40000          101
+2 	                                AMMU                              HR                                40000          101
+3                                   ABHI                              PROGRAMMING                       45000          103
+4                                   MILAN                             PROGRAMMING                       45000          103
+5                                   DILESSH                           PROGRAMMING                       45000          103
+
+
+SQL> delete from dept where deptid=105;
+
+1 row deleted.
+
+SQL> select *from dept;
+
+DEPTID           DEPTNAME          HOD
+----------   ------------------------------  --------------------------------------------------
+
+101            HR                     Sumit Singh
+
+102            SALES                  DIGVIJAY
+
+103            PROGRAMMING            AJIN
+
+104            ANALATYCS	            MALAVAZHI SREENIVASAN
+
+
+
+SQL> commit;
+
+Commit complete.
