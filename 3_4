@@ -27,13 +27,13 @@ SQL> insert into pnc values(1105,'DILESH',22,5);
 1 row created.
 select * from pnc;
 
-ADNO          NAME                      AGE                     ROLLNO
+ADNO          NAME                               AGE                     ROLLNO
 ----------    -------------------------     ---------------------  ---------------    
 1101               ANU                           22                           1
-1102              AMMU                       22                           2
-1103              ABHI                          22                           3
-1104              MILAN                      22                          4
-1105              DILESH                     22                          5
+1102              AMMU                           22                           2
+1103              ABHI                           22                           3
+1104              MILAN                          22                           4
+1105              DILESH                         22                          5
 CREATE USER theresa IDENTIFIED BY ammuanu;
 User created.
 GRANT CREATE SESSION TO theresa;
