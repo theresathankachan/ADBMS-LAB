@@ -1,0 +1,123 @@
+PRGRAM 3
+---------
+SQL> connect
+Enter user-name: system
+Enter password:
+Connected.
+SQL> create table pnc(adno int primary key,name varchar(50),age int,rollno int);
+Table created.
+SQL> insert into pnc values(1101,'ANU',22,1);
+
+1 row created.
+
+SQL> insert into pnc values(1102,'AMMU',22,2);
+
+1 row created.
+
+SQL> insert into pnc values(1103,'ABHI',22,3);
+
+1 row created.
+
+SQL> insert into pnc values(1104,'MILAN',22,4);
+
+1 row created.
+
+SQL> insert into pnc values(1105,'DILESH',22,5);
+
+1 row created.
+select * from pnc;
+
+ADNO          NAME                      AGE                     ROLLNO
+----------    -------------------------     ---------------------  ---------------    
+1101               ANU                           22                           1
+1102              AMMU                       22                           2
+1103              ABHI                          22                           3
+1104              MILAN                      22                          4
+1105              DILESH                     22                          5
+CREATE USER theresa IDENTIFIED BY ammuanu;
+User created.
+GRANT CREATE SESSION TO theresa;
+Grant succeeded.
+SQL> GRANT SELECT ON pnc TO theresa;
+Grant succeeded.
+SQL> GRANT SELECT, INSERT, DELETE, UPDATE ON pnc TO theresa;
+Grant succeeded.
+
+Enter user-name: theresa
+Enter password:
+Connected.
+
+SQL> select * from system.pnc;
+ADNO          NAME                                AGE                     ROLLNO
+----------    -------------------------     ---------------------  ---------------    
+1101               ANU                           22                           1
+1102              AMMU                           22                           2
+1103              ABHI                           22                           3
+1104              MILAN                          22                           4
+1105              DILESH                         22                           5
+SQL>revoke insert on pnc from theresa;
+Revoke suceeded
+
+SQL> insert into system.pnc values(1105,'ALBU',22,5);
+
+1 row created.
+SQL> select * from system.pnc;
+ADNO          NAME                                AGE                     ROLLNO
+----------    -------------------------     ---------------------  ---------------    
+1101               ANU                           22                          1
+1102              AMMU                           22                          2
+1103              ABHI                           22                          3
+1104              MILAN                          22                          4
+1105              DILESH                         22                          5
+1106               ALBU                          22                          6
+
+4)
+create table frien(adno int primary key,name varchar(50),age int);
+Table created.
+SQL> insert into frien values(1101,'ANU',22);
+
+1 row created.
+
+SQL> insert into frien values(1102,'AMMU',22);
+
+1 row created.
+
+SQL> insert into frien values(1103,'ABHI',22);
+
+1 row created.
+
+SQL> insert into frien values(1104,'MILAN',22);
+
+1 row created.
+
+SQL> insert into frien values(1105,'DILESH',22);
+
+1 row created.
+
+SQL> insert into frien values(1106,'ALBU',22);
+
+1 row created.
+SQL> insert into frien values(1107,'BIBY',22);
+
+1 row created.
+SQL> select * from frien;
+
+      ADNO NAME                                                      AGE
+---------- -------------------------------------------------- ----------
+      1101 ANU                                                       22
+      1102 AMMU                                                      22
+      1103 ABHI                                                      22
+      1104 MILAN                                                     22
+      1105 DILESH                                                    22
+      1106 ALBU                                                      22
+      1107 BIBY                                                      22
+      SQL>Savepoint ammu;
+      Savepoint Created.
+      update frien set adno=1108 where name='BIBY';
+      i row updated.
+      roll back;
+      Rollback complete.
+      commit;
+      Commit complete
+      
+      
