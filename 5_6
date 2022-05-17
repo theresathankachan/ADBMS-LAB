@@ -47,25 +47,25 @@ SQL> select * from customers;
 
     ID                NAME              AGE          HOME_TOWN     SALARY    
 ---------- ------------------------- ----------    -------------  ---------
-  1 				  Ramesh               			 32 		    Ahmedabad 		  2000
-	2 				  Khilan               			 25 		    Delhi 			    1500
-	3 				  Kaushik                		 23 		    kota 			      2000
-	4 				  Chaitali               		 25 		    Mumbai 			    6500
-	5 			 	  Hardik               			 27 		    Bhopal 			    8500
-	6 		     	Komal               			 22 		    Madhya pradesh  4500
-	7 			    Muffy                			 24 		    Indore 			    10000
-	8 			    Ramu               				 23 		    Delhi 			    6000
-  9 			    Rohit               			 24 		    Ahmedabad 		  5000
-	10 			    Shamli               		   23 		    Mumbai 			    10000
+        1          Ramesh               32 	     Ahmedabad 	    2000
+	2 	   Khilan               25 	     Delhi 	    1500
+	3 	   Kaushik              23           kota 	    2000
+	4 	   Chaitali             25 	     Mumbai 	    6500
+	5 	   Hardik               27 	     Bhopal 	    8500
+	6 	   Komal               	22 	     Madhya pradesh 4500
+	7 	   Muffy                24 	     Indore 	    10000
+	8 	   Ramu               	23 	     Delhi 	    6000
+        9 	   Rohit               	24 	     Ahmedabad      5000
+	10 	   Shamli                23 	     Mumbai 	   10000
 
          
 10 rows selected.
 
 SQL> select * from customers where id=4;
 
-  ID                NAME              AGE          HOME_TOWN     SALARY    
+  ID                NAME              AGE          HOME_TOWN       SALARY    
 ---------- ------------------------- ----------    -------------  ---------
-4 				  Chaitali 			 25 		Mumbai 			6500
+4 		Chaitali 	       25 	Mumbai 		    6500
 SQL> select distinct(home_town) from customers;
 
 HOME_TOWN
@@ -85,3 +85,150 @@ SQL> select count(salary) from customers;
 COUNT(SALARY)
 -------------
      10
+    6)
+SQL> create table empl(id int,fname varchar(30),lname varchar(30),dep varchar(30),loc varchar(20),salary int);
+
+Table created.
+insert into empl values(1,'Harshad','Kuwar','Marketing','Pune',10000);
+1 row created.
+insert into empl values(2,'Anurag','Rajput','IT','Mumbai',20000);
+1 row created.
+insert into empl values(3,'Chaitali','Tarle','IT','Chennai',30000);
+1 row created.
+insert into empl values(4,'Pranjal','Patil','IT','Chennai',25000);
+1 row created.
+insert into empl values(5,'Suraj','Tripathi','Marketing','Pune',15000);
+1 row created.
+insert into empl values(6,'Roshni','Jadhav','Finance','Bangalore', 20000);
+1 row created.
+insert into empl values(7,'Sandhya','Jain','Finance','Bangalore', 20000);
+1 row created.
+select *from empl;
+
+        ID FNAME                          LNAME
+---------- ------------------------------ ------------------------------
+DEP                            LOC                      SALARY
+------------------------------ -------------------- ----------
+         1 Harshad                        Kuwar
+Marketing                      Pune                      10000
+
+         2 Anurag                         Rajput
+IT                             Mumbai                    20000
+
+         3 Chaitali                       Tarle
+IT                             Chennai                   30000
+
+
+        ID FNAME                          LNAME
+---------- ------------------------------ ------------------------------
+DEP                            LOC                      SALARY
+------------------------------ -------------------- ----------
+         4 Pranjal                        Patil
+IT                             Chennai                   25000
+
+         5 Suraj                          Tripathi
+Marketing                      Pune                      15000
+
+         6 Roshni                         Jadhav
+Finance                        Bangalore                 20000
+
+
+        ID FNAME                          LNAME
+---------- ------------------------------ ------------------------------
+DEP                            LOC                      SALARY
+------------------------------ -------------------- ----------
+         7 Sandhya                        Jain
+Finance                        Bangalore                 20000
+
+
+7 rows selected.
+SQL> select  * from empl where dep='IT' and loc='Chennai';
+
+        ID FNAME                          LNAME
+---------- ------------------------------ ------------------------------
+DEP                            LOC                      SALARY
+------------------------------ -------------------- ----------
+         3 Chaitali                       Tarle
+IT                             Chennai                   30000
+
+         4 Pranjal                        Patil
+IT                             Chennai                   25000
+SQL> select fname EMP_FN,loc as Address from empl;
+EMP_FN                         ADDRESS
+------------------------------ --------------------
+Harshad                        Pune
+Anurag                         Mumbai
+Chaitali                       Chennai
+Pranjal                        Chennai
+Suraj                          Pune
+Roshni                         Bangalore
+Sandhya                        Bangalore
+
+7 rows selected.
+SQL> select *from empl where fname like 'S%';
+
+        ID FNAME                          LNAME
+---------- ------------------------------ ------------------------------
+DEP                            LOC                      SALARY
+------------------------------ -------------------- ----------
+         5 Suraj                          Tripathi
+Marketing                      Pune                      15000
+
+         7 Sandhya                        Jain
+Finance                        Bangalore                 20000
+
+SQL> select sum(salary),loc from empl group by loc;
+
+SUM(SALARY) LOC
+----------- --------------------
+      20000 Mumbai
+      40000 Bangalore
+      25000 Pune
+      55000 Chennai
+SQL> select sum(salary),loc from empl group by loc having sum(salary)>10000;
+
+SUM(SALARY) LOC
+----------- --------------------
+      20000 Mumbai
+      40000 Bangalore
+      25000 Pune
+      55000 Chennai
+SQL> select * from empl order by fname;
+
+        ID FNAME                          LNAME
+---------- ------------------------------ ------------------------------
+DEP                            LOC                      SALARY
+------------------------------ -------------------- ----------
+         2 Anurag                         Rajput
+IT                             Mumbai                    20000
+
+         3 Chaitali                       Tarle
+IT                             Chennai                   30000
+
+         1 Harshad                        Kuwar
+Marketing                      Pune                      10000
+
+
+        ID FNAME                          LNAME
+---------- ------------------------------ ------------------------------
+DEP                            LOC                      SALARY
+------------------------------ -------------------- ----------
+         4 Pranjal                        Patil
+IT                             Chennai                   25000
+
+         6 Roshni                         Jadhav
+Finance                        Bangalore                 20000
+
+         7 Sandhya                        Jain
+Finance                        Bangalore                 20000
+
+
+        ID FNAME                          LNAME
+---------- ------------------------------ ------------------------------
+DEP                            LOC                      SALARY
+------------------------------ -------------------- ----------
+         5 Suraj                          Tripathi
+Marketing                      Pune                      15000
+
+
+7 rows selected.
