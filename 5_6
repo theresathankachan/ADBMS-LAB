@@ -56,7 +56,7 @@ SQL> select * from customers;
 	7 	   Muffy                24 	     Indore 	    10000
 	8 	   Ramu               	23 	     Delhi 	    6000
         9 	   Rohit               	24 	     Ahmedabad      5000
-	10 	   Shamli                23 	     Mumbai 	   10000
+	10 	   Shamli                23 	     Mumbai 	    10000
 
          
 10 rows selected.
