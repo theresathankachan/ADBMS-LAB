@@ -1,0 +1,35 @@
+7)SQL> create table student1(studentid int,studentname varchar(50),marks int);
+
+Table created.
+SQL> insert into student1 values(1,'Sanjay',64);
+
+1 row created.
+
+SQL> insert into student1 values(2,'Varun',72);
+
+1 row created.
+
+SQL> insert into student1 values(3,'Akash',45);
+
+1 row created.
+
+SQL> insert into student1 values(4,'Rohit',86);
+
+1 row created.
+
+SQL> insert into student1 values(5,'Anjali',92);
+
+1 row created.
+
+SQL> insert into student1 values(6,'Ammu',95);
+
+1 row created.
+
+SQL> insert into student1 values(7,'Rahul',80);
+
+1 row created.
+
+SQL> insert into student1 values(8,'Prathibha',62);
+
+
+1 row created.
