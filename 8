@@ -1,0 +1,179 @@
+21/4/2022
+8) create table sailor(sid int primary key,sname varchar(25),rating int,age float);
+Table created.
+SQL> insert into sailor values(29,'BRUTUS',1,33);
+
+1 row created.
+
+SQL> insert into sailor values(31,'LUBBER',8,55);
+
+1 row created.
+
+SQL> insert into sailor values(32,'ANDY',8,25.5);
+
+1 row created.
+
+SQL> insert into sailor values(58,'RUSTY',10,35);
+
+1 row created.
+
+SQL> insert into sailor values(64,'HORATIO',7,35);
+
+1 row created.
+
+SQL> insert into sailor values(71,'ZORBA',10,16);
+
+1 row created.
+
+SQL> insert into sailor values(74,'HORATIO',9,35);
+
+1 row created.
+
+SQL> insert into sailor values(85,'ART',3,25.5);
+
+1 row created.
+
+SQL> insert into sailor values(95,'BOB',3,63.5);
+
+1 row created.
+
+SQL> select * from sailors;
+
+       SID SNAME                         RATING        AGE
+---------- ------------------------- ---------- ----------
+        22 DUSTIN                             7         45
+        29 BRUTUS                             1         33
+        31 LUBBER                             8         55
+        32 ANDY                               8       25.5
+        58 RUSTY                             10         35
+        64 HORATIO                            7         35
+        71 ZORBA                             10         16
+        74 HORATIO                            9         35
+        85 ART                                3       25.5
+        95 BOB                                3       63.5
+
+10 rows selected.
+SQL> create table boat(bid int primary key,bname varchar(30),color varchar(20));
+Table created.
+
+SQL> insert into boat values(101,'INTERLAKE','BLUE');
+
+1 row created.
+
+SQL> insert into boat values(102,'INTERLAKE','RED');
+
+1 row created.
+
+SQL> insert into boat values(103,'CLIPPER','GREEN');
+
+1 row created.
+
+SQL> insert into boat values(104,'MARINE','RED');
+
+1 row created.
+SQL> select * from boats;
+       BID BNAME                          COLOR
+---------- ------------------------------ --------------------
+       101 INTERLAKE                      BLUE
+       102 INTERLAKE                      RED
+       103 CLIPPER                        GREEN
+       104 MARINE                         RED
+	   
+SQL> create table reserves(sid int,bid int,day date,foreign key(sid)references sailor(sid),foreign key(bid) references boat(bid));
+
+Table created.	 
+SQL> insert into reserves values(22,101,'10-oct-1998');
+
+1 row created.
+
+SQL>  insert into reserves values(22,102,'10-oct-1998');
+
+1 row created.
+
+SQL>  insert into reserves values(22,103,'10-aug-1998');
+
+1 row created.
+
+SQL>  insert into reserves values(22,104,'10-JULY-1998');
+
+1 row created.
+
+SQL>  insert into reserves values(31,102,'11-oct-1998');
+
+1 row created.
+
+SQL>  insert into reserves values(31,103,'11-jun-1998');
+
+1 row created.
+
+SQL>  insert into reserves values(31,104,'11-dec-1998');
+
+1 row created.
+
+SQL>  insert into reserves values(64,101,'9-may-1998');
+
+1 row created.
+
+SQL>  insert into reserves values(64,102,'9-aug-1998');
+
+1 row created.
+
+SQL>  insert into reserves values(74,103,'9-aug-1998');
+
+1 row created.
+
+SQL> select * from reserves;
+
+       SID        BID DAY
+---------- ---------- ---------
+        22        101 10-OCT-98
+        22        102 10-OCT-98
+        22        103 10-AUG-98
+        22        104 10-JUL-98
+        31        102 11-OCT-98
+        31        103 11-JUN-98
+        31        104 11-DEC-98
+        64        101 09-MAY-98
+        64        102 09-AUG-98
+        74        103 09-AUG-98
+
+10 rows selected.
+3)SQL> select distinct (sname) from sailor;
+
+SNAME
+--------------------------------------------------
+LUBBER
+BOB
+ANDY
+HORATIO
+ART
+DUSTIN
+RUSTY
+ZORBA
+BRUTUS
+
+9 rows selected.  
+4)
+SQL> select * from sailor where SID in(select sid from reserves where bid='101');
+
+       SID SNAME                                                  RATING    AGE
+---------- -------------------------------------------------- ----------  -----------
+     
+      22   DUSTIN                                                      7    45
+
+      64   HORATIO                                                     7    35
+5)SQL> select sname from sailor where sid in(select sid from reserves);
+
+SNAME
+--------------------------------------------------
+DUSTIN
+LUBBER
+HORATIO
+HORATIO
+6)SQL> select sname,age from sailor where sid in(select sid from reserves where bid in(select bid from boat where color='RED'))order by age;
+
+SNAME                                                     AGE
+-------------------------------------------------- ----------
+HORATIO                                                    35
+DUSTIN                                                     45
+LUBBER                                                   55.5
