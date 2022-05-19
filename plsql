@@ -1,4 +1,5 @@
 1.
+SET SERVEROUTPUT ON;
 Declare
 x float;
 y float;
@@ -10,8 +11,8 @@ z:=x+y;
 Dbms_output.put_line(z);
 End;
 /
-2.
-declare
+2.SET SERVEROUTPUT ON;
+Declare
 n integer:=&n;
  
 begin
@@ -23,8 +24,8 @@ dbms_output.put_line('number is odd');
 end if;
 end;
 /
-3.
-declare
+3.SET SERVEROUTPUT ON;
+Declare
 n number;
 fac number:=1;
 i number;
@@ -39,8 +40,8 @@ dbms_output.put_line('factorial='||fac);
 end;
 /
 4.
-
-declare
+SET SERVEROUTPUT ON;
+Declare
 a number:=&x;
 b number:=&y;
 c number:=&z;
@@ -58,8 +59,8 @@ end if;
 end if;
 end;
 /
-5.
-DECLARE 
+5.SET SERVEROUTPUT ON;
+Declare 
    a number; 
    b number; 
    c number;
@@ -78,8 +79,8 @@ BEGIN
    dbms_output.put_line(' Maximum : ' || c); 
 END; 
 /
-6.
-DECLARE
+6.SET SERVEROUTPUT ON;
+Declare
    a number;
 PROCEDURE squareNum(x IN OUT number) IS
 BEGIN
