@@ -32,7 +32,7 @@ KTU SECOND SEMESTER MCA ADBMS LAB
     3        Akash      45
     4        Rohit      86
     5        Anjali     92
-    6        Ammu       95
+    6        Ammu       95 
     7        Rahul      80
     8        Prathibha  62
     9        Ravi       75
