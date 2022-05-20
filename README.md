@@ -44,7 +44,7 @@
   2.Write a query to calculate the average marks of all students from the Students table.<br>
   3.Write a query to retrieve the minimum marks out of all students from the Students table.<br>
   4.Write a query to retrieve the maximum marks out of all students from the Students table.<br>
-**8)Sailors (Sid: integer, sname:string, rating:integer,age:real).<br>**
+**8)** Sailors(Sid: integer, sname:string, rating:integer,age:real).<br>
     Boats (bid: integer, bname :string, color: string).<br>
     Reserves (sid:integer,bid:integer,day:date).<br>
   1.Create the tables.<br>
@@ -54,12 +54,12 @@
   5.Find names of sailors who have reserved at least one boat.<br>
   6.Find names of sailors who have reserved a red boat and list in the order of their age.<br>
   7.Find the ids and names of sailors who have reserved two different boats on the same day.<br>
-**9)**
+**9)**<br>
   1.Find the ids of sailors who have reserved a red boat or a green boat.<br>
   2.Find the names of sailors who have reserved boat 103.<br>
   3.Find the name and the age of theyoungest sailor.<br>
   4.Find the names of sailors who have reserved all boats.<br>
-**10)**
+**10)**<br>
   1.Find the name and the age of the youngest sailor.<br>
   2.Find the average age of sailors for each rating level.<br>
   3.Count the number of different sailor names.<br>
@@ -70,17 +70,17 @@
 **14)Write a PL/SQL program to find greatest of 3 numbers.<br>**
 **15)Write a PL/SQL procedure to find maximum of two values.<br>**
 **16)Write a PL/SQL procedure to compute square of a given value.<br>**
-*****NOSQL******
-**17)**
+*****NOSQL******<br>
+**17)**<br>
   1)Create database Employee and Make Collection With name "EMPL" Empno,Name,Salary,role.<br>
   2)Insert Records Into EMPL Collection(10 records).<br>
   3)Display Data in Proper Format.<br>
-**18)**
+**18)**<br>
   1)Create a database movie and make collection with name “MovieDetails”.<br>
   2)Insert the following documents into MovieDetails Title,Writer,Year,Actors.<br>
   3)Insert Records Into MovieDetails Collection(10 records).<br>
   4)Display Data in Proper Format.<br>
-  *****Query Processing*****
+  *****Query Processing*****<br>
   **a.Performing CRUD operations.<br>**
   1)Find Document From the EMPL collection where name begins with S.<br>
   2)Find Document From the EMPL collection where name ends with K.<br>
