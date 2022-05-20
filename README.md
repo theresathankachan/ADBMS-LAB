@@ -82,6 +82,7 @@
   4)Display Data in Proper Format.<br>
   *****Query Processing*****<br>
   **a.Performing CRUD operations.<br>**
+  **19)**
   1)Find Document From the EMPL collection where name begins with S.<br>
   2)Find Document From the EMPL collection where name ends with K.<br>
   3)Find Document From the EMPL collection  where name has S in any position.<br>
