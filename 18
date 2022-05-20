@@ -1,0 +1,96 @@
+> use movie
+switched to db movie
+> db.createCollection("MovieDetails")
+{ "ok" : 1 }
+>db.MovieDetails.insert([{"Title":"Bram Stoker's Dracula ","Writer":"Francis Ford Coppola","Year":"1992","Actors":"Gary Oldman and Winona Ryder"},
+{"Title":"dreampearl","Writer":"Cindy","Year":"2002","Actors":"flyn rider and stella"},
+{"Title":"VampireDiaries","Writer":"augustud","Year":"2017","Actors":"Paul and Nina"},
+{"Title":"Love under the full moon","Writer":"chenze","Year":"2021","Actors":"juhi jingyi and Xingze"},
+{"Title":"Who rules the world","Writer":"xuanxi","Year":"2021","Actors":"yangyang and xiao lusi"},
+{"Title":"you are my glory","Writer":"xianze","Year":"2020","Actors":"yangyang and Dilreba"},
+{"Title":"Falling into your smile","Writer":"xiaoli","Year":"2021","Actors":"Xu kai and Cheng xiao"},
+{"Title":"Eternal love of dream","Writer":"feifei","Year":"2020","Actors":"Veng gao and Dilreba"},
+{"Title":"put your head on my shoulder","Writer":"chenze","Year":"2021","Actors":"Lin yi"},
+{"Title":"Tangled","Writer":"herman","Year":"2016","Actors":"flyn rider and razella"}
+])
+BulkWriteResult({
+        "writeErrors" : [ ],
+        "writeConcernErrors" : [ ],
+        "nInserted" : 10,
+        "nUpserted" : 0,
+        "nMatched" : 0,
+        "nModified" : 0,
+        "nRemoved" : 0,
+        "upserted" : [ ]
+})
+> db.MovieDetails.find().pretty();
+{
+        "_id" : ObjectId("62833d4ec7c283731310e7ee"),
+        "Title" : "Bram Stoker's Dracula ",
+        "Writer" : "Francis Ford Coppola",
+        "Year" : "1992",
+        "Actors" : "Gary Oldman and Winona Ryder"
+}
+{
+        "_id" : ObjectId("62833d4ec7c283731310e7ef"),
+        "Title" : "dreampearl",
+        "Writer" : "Cindy",
+        "Year" : "2002",
+        "Actors" : "flyn rider and stella"
+}
+{
+        "_id" : ObjectId("62833d4ec7c283731310e7f0"),
+        "Title" : "VampireDiaries",
+        "Writer" : "augustud",
+        "Year" : "2017",
+        "Actors" : "Paul and Nina"
+}
+{
+        "_id" : ObjectId("62833d4ec7c283731310e7f1"),
+        "Title" : "Love under the full moon",
+        "Writer" : "chenze",
+        "Year" : "2021",
+        "Actors" : "juhi jingyi and Xingze"
+}
+{
+        "_id" : ObjectId("62833d4ec7c283731310e7f2"),
+        "Title" : "Who rules the world",
+        "Writer" : "xuanxi",
+        "Year" : "2021",
+        "Actors" : "yangyang and xiao lusi"
+}
+{
+        "_id" : ObjectId("62833d4ec7c283731310e7f3"),
+        "Title" : "you are my glory",
+        "Writer" : "xianze",
+        "Year" : "2020",
+        "Actors" : "yangyang and Dilreba"
+}
+{
+        "_id" : ObjectId("62833d4ec7c283731310e7f4"),
+        "Title" : "Falling into your smile",
+        "Writer" : "xiaoli",
+        "Year" : "2021",
+        "Actors" : "Xu kai and Cheng xiao"
+}
+{
+        "_id" : ObjectId("62833d4ec7c283731310e7f5"),
+        "Title" : "Eternal love of dream",
+        "Writer" : "feifei",
+        "Year" : "2020",
+        "Actors" : "Veng gao and Dilreba"
+}
+{
+        "_id" : ObjectId("62833d4ec7c283731310e7f6"),
+        "Title" : "put your head on my shoulder",
+        "Writer" : "chenze",
+        "Year" : "2021",
+        "Actors" : "Lin yi"
+}
+{
+        "_id" : ObjectId("62833d4ec7c283731310e7f7"),
+        "Title" : "Tangled",
+        "Writer" : "herman",
+        "Year" : "2016",
+        "Actors" : "flyn rider and razella"
+}
