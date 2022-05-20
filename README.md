@@ -25,7 +25,7 @@
   e) Add salary of employees for each city.<br>
   f) Show those Location whose total salary of employees is more than 10000.<br>
   g) Sort the records in the ascending order of the Employee names stored in the employee table.<br>
-  **7)
+  **7)**
 | Student ID    | Student Name  | Marks         |
 | ------------- | ------------- | ------------- |
 | 1             |  Sanjay       |      64       |
