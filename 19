@@ -1,0 +1,19 @@
+> db.EMPL.find({Name:{$regex:"^S",$options:"i"}})
+{ "_id" : ObjectId("6287d88acdbfb36950d8576c"), "Empno" : "533", "Name" : "Sumu", "Salary" : 24000, "role" : "SOFTWARE ENGINEER" }
+or
+> db.EMPL.find({Name:/^S/})
+{ "_id" : ObjectId("6287d88acdbfb36950d8576c"), "Empno" : "533", "Name" : "Sumu", "Salary" : 24000, "role" : "SOFTWARE ENGINEER" }
+> db.EMPL.find({Name:/k$/})
+{ "_id" : ObjectId("6287dbd0cdbfb36950d8576e"), "Empno" : "123", "Name" : "Karthik", "Salary" : 25000, "role" : "operational executive" }
+> db.EMPL.find({Name:{$regex:"\s",$options:"i"}})
+{ "_id" : ObjectId("6287d88acdbfb36950d85764"), "Empno" : "123", "Name" : "Treesa", "Salary" : 25000, "role" : "operational executive" }
+{ "_id" : ObjectId("6287d88acdbfb36950d85768"), "Empno" : "878", "Name" : "Dileesh", "Salary" : 45000, "role" : "PROGRAMMER" }
+{ "_id" : ObjectId("6287d88acdbfb36950d8576c"), "Empno" : "533", "Name" : "Sumu", "Salary" : 24000, "role" : "SOFTWARE ENGINEER" }
+> db.EMPL.update({Name:"ST"},{$inc:{Salary:8000}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.EMPL.update({Name:"RS"},{$set:{remark:"WC"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.EMPL.update({},{$inc:{Salary:4000}},{multi:true})
+WriteResult({ "nMatched" : 12, "nUpserted" : 0, "nModified" : 12 })
+> db.EMPL.update({Name:"RS"},{$set:{remark:"WC"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
