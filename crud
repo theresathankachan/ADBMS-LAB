@@ -1,0 +1,107 @@
+> use crud;
+switched to db crud
+> db.createCollection("crud")
+{ "ok" : 1 }
+> db.crud.insertOne({
+...     name: "Ammu",
+...     age: "22",
+... })
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("62874ef23f8134dd96ff25f0")
+}
+> db.crud.insertOne({
+...      name: "Marina",
+...      age: "22",
+... })
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("6287d1c8cdbfb36950d85757")
+}
+
+db.crud.insertMany([{  
+             name: "Anu",
+             age: "22"},
+			 {
+			 name: "Abhi",
+             age: "22"},
+			 {
+			 name: "Dileesh",
+             age: "22"
+			 },
+			 {
+			 "name":"Biby",
+			 "age":"22"
+			 },
+			 {
+			 "name":"Nandhu",
+			 "age":"22"
+			 }
+])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("6287b4336aac59e35401c8f7"),
+                ObjectId("6287b4336aac59e35401c8f8"),
+                ObjectId("6287b4336aac59e35401c8f9"),
+				ObjectId("6287d337cdbfb36950d85758"),
+				ObjectId("6287d337cdbfb36950d85759")
+        ]
+}
+> db.crud.find()
+{ "_id" : ObjectId("62874ef23f8134dd96ff25f0"), "name" : "Ammu", "age" : "21" }
+{ "_id" : ObjectId("6287b4336aac59e35401c8f7"), "name" : "Anu", "age" : "21" }
+{ "_id" : ObjectId("6287b4336aac59e35401c8f8"), "name" : "Abhi", "age" : "21" }
+{ "_id" : ObjectId("6287b4336aac59e35401c8f9"), "name" : "Dileesh", "age" : "21" }
+{ "_id" : ObjectId("6287d337cdbfb36950d85758"), "Name" : "Biby", "age" : "22" }
+{ "_id" : ObjectId("6287d337cdbfb36950d85759"), "Name" : "Nandhu", "age" : "22" }
+> db.crud.find().pretty()
+{
+        "_id" : ObjectId("62874ef23f8134dd96ff25f0"),
+        "name" : "Ammu",
+        "age" : "21"
+}
+{
+        "_id" : ObjectId("6287b4336aac59e35401c8f7"),
+        "name" : "Anu",
+        "age" : "21"
+}
+{
+        "_id" : ObjectId("6287b4336aac59e35401c8f8"),
+        "name" : "Abhi",
+        "age" : "21"
+}
+{
+        "_id" : ObjectId("6287b4336aac59e35401c8f9"),
+        "name" : "Dileesh",
+        "age" : "21"
+}
+{
+        "_id" : ObjectId("6287d337cdbfb36950d85758"),
+        "Name" : "Biby",
+        "age" : "22"
+}
+{
+        "_id" : ObjectId("6287d337cdbfb36950d85759"),
+        "Name" : "Nandhu",
+        "age" : "22"
+}
+> db.crud.findOne()
+{
+        "_id" : ObjectId("62874ef23f8134dd96ff25f0"),
+        "name" : "Ammu",
+        "age" : "22"
+}
+> db.crud.updateOne({age: "22"}, {$set:{age: "21"}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+
+> db.crud.updateMany({age: "22"}, {$set:{age: "21"}})
+{ "acknowledged" : true, "matchedCount" : 3, "modifiedCount" : 3 }
+db.crud.insertOne({
+     name: "Marina",
+     age: "22",
+})
+> db.BooksDB.deleteOne({name:"Marina"})
+{ "acknowledged" : true, "deletedCount" : 0 }
+> db.crud.deleteMany({age:"22"})
+{ "acknowledged" : true, "deletedCount" : 2 }
