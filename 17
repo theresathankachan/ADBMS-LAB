@@ -2,16 +2,16 @@
 switched to db employee
 > db.createCollection("EMPL")
 { "ok" : 1 }
-db.EMPL.insert([{"Empno":"123","Name":"Treesa","Salary":"25000","role":"operational executive"},
-{"Empno":"234","Name":"Anu","Salary":"50000","role":"HR"},
-{"Empno":"788","Name":"Ammu","Salary":"50000","role":"HR"},
-{"Empno":"546","Name":"Abhi","Salary":"45000","role":"PROGRAMMER"},
-{"Empno":"878","Name":"Dileesh","Salary":"45000","role":"PROGRAMMER"},
-{"Empno":"454","Name":"Milan","Salary":"48000","role":"SOFTWARE DEVELOPER"},
-{"Empno":"676","Name":"Biby","Salary":"27000","role":"DATA ANALYST"},
-{"Empno":"899","Name":"Nandhu","Salary":"27000","role":"DATA ANALYST"},
-{"Empno":"533","Name":"Sumu","Salary":"24000","role":"SOFTWARE ENGINEER"},
-{"Empno":"343","Name":"Anit","Salary":"32000","role":"R&D"}])
+> db.EMPL.insert([{"Empno":"123","Name":"Treesa","Salary":"25000","role":"operational executive"},
+... {"Empno":"234","Name":"Anu","Salary":"50000","role":"HR"},
+... {"Empno":"788","Name":"Ammu","Salary":"50000","role":"HR"},
+... {"Empno":"546","Name":"Abhi","Salary":"45000","role":"PROGRAMMER"},
+... {"Empno":"878","Name":"Dileesh","Salary":"45000","role":"PROGRAMMER"},
+... {"Empno":"454","Name":"Milan","Salary":"48000","role":"SOFTWARE DEVELOPER"},
+... {"Empno":"676","Name":"Biby","Salary":"27000","role":"DATA ANALYST"},
+... {"Empno":"899","Name":"Nandhu","Salary":"27000","role":"DATA ANALYST"},
+... {"Empno":"533","Name":"Sumu","Salary":"24000","role":"SOFTWARE ENGINEER"},
+... {"Empno":"343","Name":"Anit","Salary":"32000","role":"R&D"}])
 BulkWriteResult({
         "writeErrors" : [ ],
         "writeConcernErrors" : [ ],
@@ -26,140 +26,70 @@ BulkWriteResult({
 {
         "_id" : ObjectId("62833f1ec7c283731310e7f8"),
         "Empno" : "123",
-        "Name" : "",
-        "Salary" : "",
-        "role" : ""
+        "Name" : "Treesa",
+        "Salary" : "25000",
+        "role" : "operational executive"
 }
 {
         "_id" : ObjectId("62833f1ec7c283731310e7f9"),
         "Empno" : "234",
         "Name" : "Anu",
-        "Salary" : "",
-        "role" : ""
+        "Salary" : "50000",
+        "role" : "HR"
 }
 {
         "_id" : ObjectId("62833f1ec7c283731310e7fa"),
         "Empno" : "788",
         "Name" : "Ammu",
-        "Salary" : "",
-        "role" : ""
+        "Salary" : "50000",
+        "role" : "HR"
 }
 {
         "_id" : ObjectId("62833f1ec7c283731310e7fb"),
         "Empno" : "546",
         "Name" : "Abhi",
-        "Salary" : "",
-        "role" : ""
+        "Salary" : "45000",
+        "role" : "PROGRAMMER"
 }
 {
         "_id" : ObjectId("62833f1ec7c283731310e7fc"),
         "Empno" : "878",
         "Name" : "Dileesh",
-        "Salary" : "",
-        "role" : ""
+        "Salary" : "45000",
+        "role" : "PROGRAMMER"
 }
 {
         "_id" : ObjectId("62833f1ec7c283731310e7fd"),
         "Empno" : "454",
         "Name" : "Milan",
-        "Salary" : "",
-        "role" : ""
+        "Salary" : "48000",
+        "role" : "SOFTWARE DEVELOPER"
 }
 {
         "_id" : ObjectId("62833f1ec7c283731310e7fe"),
         "Empno" : "676",
         "Name" : "Biby",
-        "Salary" : "",
-        "role" : ""
+        "Salary" : "27000",
+        "role" : "DATA ANALYST"
 }
 {
         "_id" : ObjectId("62833f1ec7c283731310e7ff"),
         "Empno" : "899",
         "Name" : "Nandhu",
-        "Salary" : "",
-        "role" : ""
+        "Salary" : "27000",
+        "role" : "DATA ANALYST"
 }
 {
         "_id" : ObjectId("62833f1ec7c283731310e800"),
         "Empno" : "533",
         "Name" : "Sumu",
-        "Salary" : "",
-        "role" : ""
+        "Salary" : "24000",
+        "role" : "SOFTWARE ENGINEER"
 }
 {
         "_id" : ObjectId("62833f1ec7c283731310e801"),
         "Empno" : "343",
         "Name" : "Anit",
-        "Salary" : "",
-        "role" : ""
-}> db.EMPL.find().pretty();
-{
-        "_id" : ObjectId("62833f1ec7c283731310e7f8"),
-        "Empno" : "123",
-        "Name" : "",
-        "Salary" : "",
-        "role" : ""
-}
-{
-        "_id" : ObjectId("62833f1ec7c283731310e7f9"),
-        "Empno" : "234",
-        "Name" : "Anu",
-        "Salary" : "",
-        "role" : ""
-}
-{
-        "_id" : ObjectId("62833f1ec7c283731310e7fa"),
-        "Empno" : "788",
-        "Name" : "Ammu",
-        "Salary" : "",
-        "role" : ""
-}
-{
-        "_id" : ObjectId("62833f1ec7c283731310e7fb"),
-        "Empno" : "546",
-        "Name" : "Abhi",
-        "Salary" : "",
-        "role" : ""
-}
-{
-        "_id" : ObjectId("62833f1ec7c283731310e7fc"),
-        "Empno" : "878",
-        "Name" : "Dileesh",
-        "Salary" : "",
-        "role" : ""
-}
-{
-        "_id" : ObjectId("62833f1ec7c283731310e7fd"),
-        "Empno" : "454",
-        "Name" : "Milan",
-        "Salary" : "",
-        "role" : ""
-}
-{
-        "_id" : ObjectId("62833f1ec7c283731310e7fe"),
-        "Empno" : "676",
-        "Name" : "Biby",
-        "Salary" : "",
-        "role" : ""
-}
-{
-        "_id" : ObjectId("62833f1ec7c283731310e7ff"),
-        "Empno" : "899",
-        "Name" : "Nandhu",
-        "Salary" : "",
-        "role" : ""
-}
-{
-        "_id" : ObjectId("62833f1ec7c283731310e800"),
-        "Empno" : "533",
-        "Name" : "Sumu",
-        "Salary" : "",
-        "role" : ""
-}
-{
-        "_id" : ObjectId("62833f1ec7c283731310e801"),
-        "Empno" : "343",
-        "Name" : "Anit",
-        "Salary" : "",
-        "role" : ""
+        "Salary" : "32000",
+        "role" : "R&D"
 }
