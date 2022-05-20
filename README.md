@@ -64,13 +64,13 @@
   2.Find the average age of sailors for each rating level.<br>
   3.Count the number of different sailor names.<br>
   4.Calculate the average age of all sailors.<br>
-**11)Write a PL/SQL program to add two numbers.<br>**        
+**11)Write a PL/SQL program to add two numbers.**<br>    
 **12)Write a PL/SQL program to check whether a number is odd or even.<br>**
 **13)Write a PL/SQL program to find factorial of a number.<br>**
 **14)Write a PL/SQL program to find greatest of 3 numbers.<br>**
 **15)Write a PL/SQL procedure to find maximum of two values.<br>**
 **16)Write a PL/SQL procedure to compute square of a given value.<br>**
-*****NOSQL******<br>
+****NOSQL****<br>
 **17)**<br>
   1)Create database Employee and Make Collection With name "EMPL" Empno,Name,Salary,role.<br>
   2)Insert Records Into EMPL Collection(10 records).<br>
