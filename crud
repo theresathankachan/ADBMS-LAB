@@ -102,6 +102,6 @@ db.crud.insertOne({
      age: "22",
 })
 > db.BooksDB.deleteOne({name:"Marina"})
-{ "acknowledged" : true, "deletedCount" : 0 }
+{ "acknowledged" : true, "deletedCount" : 1 }
 > db.crud.deleteMany({age:"22"})
 { "acknowledged" : true, "deletedCount" : 2 }
