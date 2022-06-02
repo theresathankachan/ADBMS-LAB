@@ -122,8 +122,11 @@ Horataio
 c)select sname,age from sailor where age in(select min(age) from sailor);
 SNAME	AGE
 Zorba	16
-d)SELECT S.sname FROM sailor S WHERE NOT EXISTS (SELECT B.bid FROM boat B EXCEPT SELECT R.bid FROM reserve R WHERE R.sid=S.sid );
-or
+d)SQL> select s.sid,s.sname from sailor s where not exists (select b.bid from boat b where not exists (select r.bid from reserve r where r.bid=b.bid and r.sid=s.sid));
+
+       SID SNAME
+---------- -------------------------
+        22 Dustin
 
 
 10)
