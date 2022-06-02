@@ -71,18 +71,20 @@
 **15)Write a PL/SQL procedure to find maximum of two values.<br>**
 **16)Write a PL/SQL procedure to compute square of a given value.<br>**
 ****NOSQL****<br>
-**17)**<br>
+**17)**Execution of trigger
+**18)**Execution of cursor
+**19)**<br>
   1)Create database Employee and Make Collection With name "EMPL" Empno,Name,Salary,role.<br>
   2)Insert Records Into EMPL Collection(10 records).<br>
   3)Display Data in Proper Format.<br>
-**18)**<br>
+**20)**<br>
   1)Create a database movie and make collection with name “MovieDetails”.<br>
   2)Insert the following documents into MovieDetails Title,Writer,Year,Actors.<br>
   3)Insert Records Into MovieDetails Collection(10 records).<br>
   4)Display Data in Proper Format.<br>
   *****Query Processing*****<br>
   **a.Performing CRUD operations.<br>**
-  **19)**
+  **21)**
   1)Find Document From the EMPL collection where name begins with S.<br>
   2)Find Document From the EMPL collection where name ends with K.<br>
   3)Find Document From the EMPL collection  where name has S in any position.<br>
