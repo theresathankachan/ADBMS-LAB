@@ -71,8 +71,8 @@
 **15)Write a PL/SQL procedure to find maximum of two values.<br>**
 **16)Write a PL/SQL procedure to compute square of a given value.<br>**
 ****NOSQL****<br>
-**17)**Execution of trigger<br>
-**18)**Execution of cursor<br>
+**17)Execution of trigger<br>**
+**18)Execution of cursor<br>**
 **19)**<br>
   1)Create database Employee and Make Collection With name "EMPL" Empno,Name,Salary,role.<br>
   2)Insert Records Into EMPL Collection(10 records).<br>
@@ -91,3 +91,13 @@
   4)Update Salary Of Employee where Name is "ST" by +8000.<br>
   5)Update Salary Of All Employee by giving an increment of +4000 each.<br>
   6)Add a New Field remark to document with name "RS" set Remark as WC.<br>
+  **22)Program to create users and roles.<br>**
+  **23)structure of 'restaurants' collection :.<br>**
+  1.   Write a MongoDB query to display all the documents in the collection restaurants. <br>
+2.Write a MongoDB query to display the fields restaurant_id, name, borough and cuisine for all the documents in the collection restaurant.<br>
+3.Write a MongoDB query to display the first 5 restaurant which is in the borough Bronx(use limit)<br>
+4.Write a MongoDB query to arrange the name of the restaurants in ascending order along with all the columns<br>
+5.Write a MongoDB query to find the restaurant name, borough, longitude and attitude and cuisine for those restaurants which contains 'mon' as three letters somewhere in its name.<br>
+6.Write a MongoDB query to find the restaurant name, borough, longitude and latitude and cuisine for those restaurants which contain 'Mad' as first three letters of its name<br>
+
+
