@@ -71,8 +71,8 @@
 **15)Write a PL/SQL procedure to find maximum of two values.<br>**
 **16)Write a PL/SQL procedure to compute square of a given value.<br>**
 ****NOSQL****<br>
-**17)**Execution of trigger
-**18)**Execution of cursor
+**17)**Execution of trigger<br>
+**18)**Execution of cursor<br>
 **19)**<br>
   1)Create database Employee and Make Collection With name "EMPL" Empno,Name,Salary,role.<br>
   2)Insert Records Into EMPL Collection(10 records).<br>
