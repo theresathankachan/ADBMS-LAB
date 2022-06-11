@@ -1,0 +1,579 @@
+ db.faculty.insertMany([
+...             { "name":"Krish", "age":35,"gender":"M","exp":10,subjects:["DS","C","OS"],"type":"Full Time","qualification":"M.Tech" },
+...             { "name":"Manoj", "age":38,"gender":"M","exp":12,subjects:["JAVA","DBMS"],"type":"Full Time", "qualification":"Ph.D"},
+...             { "name":"Anush", "age":32,"gender":"F","exp":8,subjects:["C","CPP"],"type":"Part Time","qualification":"M.Tech" },
+...             { "name":"Suresh", "age":40,"gender":"M","exp":9,subjects:["JAVA","DBMS","NETWORKING"],"type":"Full Time", "qualification":"Ph.D"},
+...             { "name":"Rajesh", "age":35,"gender":"M","exp":7,subjects:["DS","C","OS"],"type":"Full Time","qualification":"M.Tech" },
+...             { "name":"Mani", "age":38,"gender":"F","exp":10,subjects:["JAVA","DBMS","OS"],"type":"Part Time", "qualification":"Ph.D"},
+...             { "name":"Sivani", "age":32,"gender":"F","exp":8,subjects:["C","CPP","MATHS"],"type":"Part Time","qualification":"M.Tech" },
+...             { "name":"Nagesh", "age":39,"gender":"M","exp":11,subjects:["JAVA","DBMS","NETWORKING"],"type":"Full Time", "qualification":"Ph.D"},
+...             { "name":"Nagesh", "age":35,"gender":"M","exp":9,subjects:["JAVA",".Net","NETWORKING"],"type":"Full Time", "qualification":"Ph.D"},
+...             { "name":"Latha", "age":40,"gender":"F","exp":13,subjects:["MATHS"],"type":"Full Time", "qualification":"Ph.D"}
+... ]);
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("62a3d205235aa5007c8babbc"),
+                ObjectId("62a3d205235aa5007c8babbd"),
+                ObjectId("62a3d205235aa5007c8babbe"),
+                ObjectId("62a3d205235aa5007c8babbf"),
+                ObjectId("62a3d205235aa5007c8babc0"),
+                ObjectId("62a3d205235aa5007c8babc1"),
+                ObjectId("62a3d205235aa5007c8babc2"),
+                ObjectId("62a3d205235aa5007c8babc3"),
+                ObjectId("62a3d205235aa5007c8babc4"),
+                ObjectId("62a3d205235aa5007c8babc5")
+        ]
+}
+1. > db.faculty.find({}).pretty()
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babbc"),
+        "name" : "Krish",
+        "age" : 35,
+        "gender" : "M",
+        "exp" : 10,
+        "subjects" : [
+                "DS",
+                "C",
+                "OS"
+        ],
+        "type" : "Full Time",
+        "qualification" : "M.Tech"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babbd"),
+        "name" : "Manoj",
+        "age" : 38,
+        "gender" : "M",
+        "exp" : 12,
+        "subjects" : [
+                "JAVA",
+                "DBMS"
+        ],
+        "type" : "Full Time",
+        "qualification" : "Ph.D"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babbe"),
+        "name" : "Anush",
+        "age" : 32,
+        "gender" : "F",
+        "exp" : 8,
+        "subjects" : [
+                "C",
+                "CPP"
+        ],
+        "type" : "Part Time",
+        "qualification" : "M.Tech"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babbf"),
+        "name" : "Suresh",
+        "age" : 40,
+        "gender" : "M",
+        "exp" : 9,
+        "subjects" : [
+                "JAVA",
+                "DBMS",
+                "NETWORKING"
+        ],
+        "type" : "Full Time",
+        "qualification" : "Ph.D"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babc0"),
+        "name" : "Rajesh",
+        "age" : 35,
+        "gender" : "M",
+        "exp" : 7,
+        "subjects" : [
+                "DS",
+                "C",
+                "OS"
+        ],
+        "type" : "Full Time",
+        "qualification" : "M.Tech"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babc1"),
+        "name" : "Mani",
+        "age" : 38,
+        "gender" : "F",
+        "exp" : 10,
+        "subjects" : [
+                "JAVA",
+                "DBMS",
+                "OS"
+        ],
+        "type" : "Part Time",
+        "qualification" : "Ph.D"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babc2"),
+        "name" : "Sivani",
+        "age" : 32,
+        "gender" : "F",
+        "exp" : 8,
+        "subjects" : [
+                "C",
+                "CPP",
+                "MATHS"
+        ],
+        "type" : "Part Time",
+        "qualification" : "M.Tech"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babc3"),
+        "name" : "Nagesh",
+        "age" : 39,
+        "gender" : "M",
+        "exp" : 11,
+        "subjects" : [
+                "JAVA",
+                "DBMS",
+                "NETWORKING"
+        ],
+        "type" : "Full Time",
+        "qualification" : "Ph.D"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babc4"),
+        "name" : "Nagesh",
+        "age" : 35,
+        "gender" : "M",
+        "exp" : 9,
+        "subjects" : [
+                "JAVA",
+                ".Net",
+                "NETWORKING"
+        ],
+        "type" : "Full Time",
+        "qualification" : "Ph.D"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babc5"),
+        "name" : "Latha",
+        "age" : 40,
+        "gender" : "F",
+        "exp" : 13,
+        "subjects" : [
+                "MATHS"
+        ],
+        "type" : "Full Time",
+        "qualification" : "Ph.D"
+}
+2. db.faculty.count()
+10
+3.db.faculty.find({qualification:'Ph.D'}).pretty()
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babbd"),
+        "name" : "Manoj",
+        "age" : 38,
+        "gender" : "M",
+        "exp" : 12,
+        "subjects" : [
+                "JAVA",
+                "DBMS"
+        ],
+        "type" : "Full Time",
+        "qualification" : "Ph.D"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babbf"),
+        "name" : "Suresh",
+        "age" : 40,
+        "gender" : "M",
+        "exp" : 9,
+        "subjects" : [
+                "JAVA",
+                "DBMS",
+                "NETWORKING"
+        ],
+        "type" : "Full Time",
+        "qualification" : "Ph.D"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babc1"),
+        "name" : "Mani",
+        "age" : 38,
+        "gender" : "F",
+        "exp" : 10,
+        "subjects" : [
+                "JAVA",
+                "DBMS",
+                "OS"
+        ],
+        "type" : "Part Time",
+        "qualification" : "Ph.D"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babc3"),
+        "name" : "Nagesh",
+        "age" : 39,
+        "gender" : "M",
+        "exp" : 11,
+        "subjects" : [
+                "JAVA",
+                "DBMS",
+                "NETWORKING"
+        ],
+        "type" : "Full Time",
+        "qualification" : "Ph.D"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babc4"),
+        "name" : "Nagesh",
+        "age" : 35,
+        "gender" : "M",
+        "exp" : 9,
+        "subjects" : [
+                "JAVA",
+                ".Net",
+                "NETWORKING"
+        ],
+        "type" : "Full Time",
+        "qualification" : "Ph.D"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babc5"),
+        "name" : "Latha",
+        "age" : 40,
+        "gender" : "F",
+        "exp" : 13,
+        "subjects" : [
+                "MATHS"
+        ],
+        "type" : "Full Time",
+        "qualification" : "Ph.D"
+}
+4.db.faculty.find( { "exp":{ $gt : 8 , $lt : 12} }).pretty()
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babbc"),
+        "name" : "Krish",
+        "age" : 35,
+        "gender" : "M",
+        "exp" : 10,
+        "subjects" : [
+                "DS",
+                "C",
+                "OS"
+        ],
+        "type" : "Full Time",
+        "qualification" : "M.Tech"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babbf"),
+        "name" : "Suresh",
+        "age" : 40,
+        "gender" : "M",
+        "exp" : 9,
+        "subjects" : [
+                "JAVA",
+                "DBMS",
+                "NETWORKING"
+        ],
+        "type" : "Full Time",
+        "qualification" : "Ph.D"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babc1"),
+        "name" : "Mani",
+        "age" : 38,
+        "gender" : "F",
+        "exp" : 10,
+        "subjects" : [
+                "JAVA",
+                "DBMS",
+                "OS"
+        ],
+        "type" : "Part Time",
+        "qualification" : "Ph.D"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babc3"),
+        "name" : "Nagesh",
+        "age" : 39,
+        "gender" : "M",
+        "exp" : 11,
+        "subjects" : [
+                "JAVA",
+                "DBMS",
+                "NETWORKING"
+        ],
+        "type" : "Full Time",
+        "qualification" : "Ph.D"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babc4"),
+        "name" : "Nagesh",
+        "age" : 35,
+        "gender" : "M",
+        "exp" : 9,
+        "subjects" : [
+                "JAVA",
+                ".Net",
+                "NETWORKING"
+        ],
+        "type" : "Full Time",
+        "qualification" : "Ph.D"
+}
+5.db.faculty.find( { $or: [{"subjects": "MATHS" },{"subjects" : "NETWORKING"} ] }).pretty()
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babbf"),
+        "name" : "Suresh",
+        "age" : 40,
+        "gender" : "M",
+        "exp" : 9,
+        "subjects" : [
+                "JAVA",
+                "DBMS",
+                "NETWORKING"
+        ],
+        "type" : "Full Time",
+        "qualification" : "Ph.D"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babc2"),
+        "name" : "Sivani",
+        "age" : 32,
+        "gender" : "F",
+        "exp" : 8,
+        "subjects" : [
+                "C",
+                "CPP",
+                "MATHS"
+        ],
+        "type" : "Part Time",
+        "qualification" : "M.Tech"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babc3"),
+        "name" : "Nagesh",
+        "age" : 39,
+        "gender" : "M",
+        "exp" : 11,
+        "subjects" : [
+                "JAVA",
+                "DBMS",
+                "NETWORKING"
+        ],
+        "type" : "Full Time",
+        "qualification" : "Ph.D"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babc4"),
+        "name" : "Nagesh",
+        "age" : 35,
+        "gender" : "M",
+        "exp" : 9,
+        "subjects" : [
+                "JAVA",
+                ".Net",
+                "NETWORKING"
+        ],
+        "type" : "Full Time",
+        "qualification" : "Ph.D"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babc5"),
+        "name" : "Latha",
+        "age" : 40,
+        "gender" : "F",
+        "exp" : 13,
+        "subjects" : [
+                "MATHS"
+        ],
+        "type" : "Full Time",
+        "qualification" : "Ph.D"
+}
+6.db.faculty.find( { $and: [{"subjects": "MATHS" },{"age" : { $gt: 30} }, {"qualification" : "Ph.D"} ] }).pretty()
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babc5"),
+        "name" : "Latha",
+        "age" : 40,
+        "gender" : "F",
+        "exp" : 13,
+        "subjects" : [
+                "MATHS"
+        ],
+        "type" : "Full Time",
+        "qualification" : "Ph.D"
+}
+7. db.faculty.find( { $or: [{"subjects": "JAVA" },{"type" : "Part Time"} ] }).pretty()
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babbd"),
+        "name" : "Manoj",
+        "age" : 38,
+        "gender" : "M",
+        "exp" : 12,
+        "subjects" : [
+                "JAVA",
+                "DBMS"
+        ],
+        "type" : "Full Time",
+        "qualification" : "Ph.D"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babbe"),
+        "name" : "Anush",
+        "age" : 32,
+        "gender" : "F",
+        "exp" : 8,
+        "subjects" : [
+                "C",
+                "CPP"
+        ],
+        "type" : "Part Time",
+        "qualification" : "M.Tech"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babbf"),
+        "name" : "Suresh",
+        "age" : 40,
+        "gender" : "M",
+        "exp" : 9,
+        "subjects" : [
+                "JAVA",
+                "DBMS",
+                "NETWORKING"
+        ],
+        "type" : "Full Time",
+        "qualification" : "Ph.D"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babc1"),
+        "name" : "Mani",
+        "age" : 38,
+        "gender" : "F",
+        "exp" : 10,
+        "subjects" : [
+                "JAVA",
+                "DBMS",
+                "OS"
+        ],
+        "type" : "Part Time",
+        "qualification" : "Ph.D"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babc2"),
+        "name" : "Sivani",
+        "age" : 32,
+        "gender" : "F",
+        "exp" : 8,
+        "subjects" : [
+                "C",
+                "CPP",
+                "MATHS"
+        ],
+        "type" : "Part Time",
+        "qualification" : "M.Tech"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babc3"),
+        "name" : "Nagesh",
+        "age" : 39,
+        "gender" : "M",
+        "exp" : 11,
+        "subjects" : [
+                "JAVA",
+                "DBMS",
+                "NETWORKING"
+        ],
+        "type" : "Full Time",
+        "qualification" : "Ph.D"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babc4"),
+        "name" : "Nagesh",
+        "age" : 35,
+        "gender" : "M",
+        "exp" : 9,
+        "subjects" : [
+                "JAVA",
+                ".Net",
+                "NETWORKING"
+        ],
+        "type" : "Full Time",
+        "qualification" : "Ph.D"
+}
+8. db.faculty.deleteMany({age:{$gt:55}})
+{ "acknowledged" : true, "deletedCount" : 0 }
+9. db.faculty.find({},{name:1,_id:0,qualification:1,exp:1}).sort({exp:-1}).pretty()
+{ "name" : "Latha", "exp" : 13, "qualification" : "Ph.D" }
+{ "name" : "Manoj", "exp" : 12, "qualification" : "Ph.D" }
+{ "name" : "Nagesh", "exp" : 11, "qualification" : "Ph.D" }
+{ "name" : "Krish", "exp" : 10, "qualification" : "M.Tech" }
+{ "name" : "Mani", "exp" : 10, "qualification" : "Ph.D" }
+{ "name" : "Suresh", "exp" : 9, "qualification" : "Ph.D" }
+{ "name" : "Nagesh", "exp" : 9, "qualification" : "Ph.D" }
+{ "name" : "Anush", "exp" : 8, "qualification" : "M.Tech" }
+{ "name" : "Sivani", "exp" : 8, "qualification" : "M.Tech" }
+{ "name" : "Rajesh", "exp" : 7, "qualification" : "M.Tech" }
+10.db.faculty.find({}).sort({age:-1}).limit(5).pretty()
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babc5"),
+        "name" : "Latha",
+        "age" : 40,
+        "gender" : "F",
+        "exp" : 13,
+        "subjects" : [
+                "MATHS"
+        ],
+        "type" : "Full Time",
+        "qualification" : "Ph.D"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babbf"),
+        "name" : "Suresh",
+        "age" : 40,
+        "gender" : "M",
+        "exp" : 9,
+        "subjects" : [
+                "JAVA",
+                "DBMS",
+                "NETWORKING"
+        ],
+        "type" : "Full Time",
+        "qualification" : "Ph.D"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babc3"),
+        "name" : "Nagesh",
+        "age" : 39,
+        "gender" : "M",
+        "exp" : 11,
+        "subjects" : [
+                "JAVA",
+                "DBMS",
+                "NETWORKING"
+        ],
+        "type" : "Full Time",
+        "qualification" : "Ph.D"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babc1"),
+        "name" : "Mani",
+        "age" : 38,
+        "gender" : "F",
+        "exp" : 10,
+        "subjects" : [
+                "JAVA",
+                "DBMS",
+                "OS"
+        ],
+        "type" : "Part Time",
+        "qualification" : "Ph.D"
+}
+{
+        "_id" : ObjectId("62a3d205235aa5007c8babbd"),
+        "name" : "Manoj",
+        "age" : 38,
+        "gender" : "M",
+        "exp" : 12,
+        "subjects" : [
+                "JAVA",
+                "DBMS"
+        ],
+        "type" : "Full Time",
+        "qualification" : "Ph.D"
+}
