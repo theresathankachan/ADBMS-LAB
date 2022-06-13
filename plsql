@@ -11,6 +11,17 @@ z:=x+y;
 Dbms_output.put_line(z);
 End;
 /
+output
+-------------------
+Enter value for x: 5
+old   6: x:=&x;
+new   6: x:=5;
+Enter value for y: 8
+old   7: y:=&y;
+new   7: y:=8;
+13
+
+PL/SQL procedure successfully completed.
 2.SET SERVEROUTPUT ON;
 Declare
 n integer:=&n;
@@ -24,6 +35,14 @@ dbms_output.put_line('number is odd');
 end if;
 end;
 /
+output
+------------
+Enter value for n: 5
+old   2: n integer:=&n;
+new   2: n integer:=5;
+number is odd
+
+PL/SQL procedure successfully completed.
 3.SET SERVEROUTPUT ON;
 Declare
 n number;
@@ -39,6 +58,12 @@ end loop;
 dbms_output.put_line('factorial='||fac);
 end;
 /
+Enter value for n: 5
+old   6: n:=&n;
+new   6: n:=5;
+factorial=120
+
+PL/SQL procedure successfully completed.
 4.
 SET SERVEROUTPUT ON;
 Declare
@@ -59,6 +84,19 @@ end if;
 end if;
 end;
 /
+Enter value for x: 5
+old   2: a number:=&x;
+new   2: a number:=5;
+Enter value for y: 4
+old   3: b number:=&y;
+new   3: b number:=4;
+Enter value for z: 3
+old   4: c number:=&z;
+new   4: c number:=3;
+a is greatest
+
+PL/SQL procedure successfully completed.
+
 5.SET SERVEROUTPUT ON;
 Declare 
    a number; 
@@ -79,6 +117,17 @@ BEGIN
    dbms_output.put_line(' Maximum : ' || c); 
 END; 
 /
+output
+---------------------
+Enter value for x: 3
+old  14:    a:= &x;
+new  14:    a:= 3;
+Enter value for y: 2
+old  15:    b:= &y;
+new  15:    b:= 2;
+Maximum : 3
+
+PL/SQL procedure successfully completed
 6.SET SERVEROUTPUT ON;
 Declare
    a number;
@@ -92,3 +141,9 @@ BEGIN
    dbms_output.put_line(' Square of (2): ' ||  a);
 END;
 /
+Enter value for n: 5
+old   8:    a:= &n;
+new   8:    a:= 5;
+Square of (2): 25
+
+PL/SQL procedure successfully completed.
