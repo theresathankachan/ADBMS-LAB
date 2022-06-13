@@ -76,7 +76,7 @@ SQL> DECLARE
  19  dbms_output.put_line( total_rows || ' customers updated ');
  20
  21  END IF;
- 22
+ 22 
  23  END;
  24
  25  /
