@@ -93,11 +93,79 @@
   6)Add a New Field remark to document with name "RS" set Remark as WC.<br>
   **22)Program to create users and roles.<br>**
   **23)structure of 'restaurants' collection :.<br>**
-  1.   Write a MongoDB query to display all the documents in the collection restaurants. <br>
-2.Write a MongoDB query to display the fields restaurant_id, name, borough and cuisine for all the documents in the collection restaurant.<br>
-3.Write a MongoDB query to display the first 5 restaurant which is in the borough Bronx(use limit)<br>
-4.Write a MongoDB query to arrange the name of the restaurants in ascending order along with all the columns<br>
-5.Write a MongoDB query to find the restaurant name, borough, longitude and attitude and cuisine for those restaurants which contains 'mon' as three letters somewhere in its name.<br>
-6.Write a MongoDB query to find the restaurant name, borough, longitude and latitude and cuisine for those restaurants which contain 'Mad' as first three letters of its name<br>
+  1.prog 23: db.faculty.insrtMany([
 
 
+           
+{ "name":"Krish",
+"age":35,"gender":"M","exp":10,subjects:["DS","C","OS"],"type":"Full
+Time","qualification":"M.Tech" },
+
+
+           
+{ "name":"Manoj",
+"age":38,"gender":"M","exp":12,subjects:["JAVA","DBMS"],"type":"Full
+Time", "qualification":"Ph.D"},
+
+
+           
+{ "name":"Anush",
+"age":32,"gender":"F","exp":8,subjects:["C","CPP"],"type":"Part
+Time","qualification":"M.Tech" },
+
+
+           
+{ "name":"Suresh",
+"age":40,"gender":"M","exp":9,subjects:["JAVA","DBMS","NETWORKING"],"type":"Full
+Time", "qualification":"Ph.D"},
+
+
+           
+{ "name":"Rajesh",
+"age":35,"gender":"M","exp":7,subjects:["DS","C","OS"],"type":"Full
+Time","qualification":"M.Tech" },
+
+
+           
+{ "name":"Mani",
+"age":38,"gender":"F","exp":10,subjects:["JAVA","DBMS","OS"],"type":"Part
+Time", "qualification":"Ph.D"},
+
+
+           
+{ "name":"Sivani",
+"age":32,"gender":"F","exp":8,subjects:["C","CPP","MATHS"],"type":"Part
+Time","qualification":"M.Tech" },
+
+
+           
+{ "name":"Nagesh",
+"age":39,"gender":"M","exp":11,subjects:["JAVA","DBMS","NETWORKING"],"type":"Full
+Time", "qualification":"Ph.D"},
+
+
+           
+{ "name":"Nagesh",
+"age":35,"gender":"M","exp":9,subjects:["JAVA",".Net","NETWORKING"],"type":"Full
+Time", "qualification":"Ph.D"},
+
+
+           
+{ "name":"Latha",
+"age":40,"gender":"F","exp":13,subjects:["MATHS"],"type":"Full
+Time", "qualification":"Ph.D"}
+
+
+]);
+
+
+1.Get the details of all the faculty.<br>
+2. Get the count of all faculty members. <br>
+3. Get all the faculty members whose qualification is “Ph.D”.<br>
+4. Get all the faculty members whose experience is between 8 to 12 years.<br>
+5. Get all the faculty members who teach “MATHS” or “NETWORKING”.<br>
+6. Get all the faculty members who teach “MATHS” and whose age is more than 30 years and qualification must be “Ph.D”.<br>
+7. Get all the faculty members who are working part-time or who teach “JAVA”.<br>
+8.Delete all faculty members whose age is more than 55 years.<br>
+9.Get the name, qualification and exp of all faculty members and display the same in ascending order of exp.<br>
+10. Sort the faculty details by their age (descending order) and get the details of the first five faculty members only.<br>
